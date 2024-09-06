@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cli-assistant"
+version = "0.1.0"
+description = "project that acts as a CLI assistant for linux and other command line tools"
+authors = ["talhamuhammadali <talha_muhammadali@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain_core = "*"
+langchain_groq = "*"
+langchain = "*"
+python-dotenv = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
