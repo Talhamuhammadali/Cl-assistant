@@ -10,14 +10,16 @@ def main():
     last_command = ""
     suggestions = []
     suggestion_index = 0
-
     while True:
         try:
             command = input("$ ")
+            if command == "!q":
+                print("\nExiting...")
+                break
             if command.strip() == "":
                 continue
 
-            if command == last_command and time.time() - last_tab_time < 0.5:
+            if command == last_command and time.time() - last_tab_time < 2:
                 if suggestions:
                     suggestion_index = (suggestion_index + 1) % len(suggestions)
                     print(f"\nCompleted command: {suggestions[suggestion_index]}")
